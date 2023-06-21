@@ -16,4 +16,7 @@ $header .= "Reply-To: $email";
 
 if(!mail($to, $subject, $body, $header))
   http_response_code(500);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
